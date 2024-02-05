@@ -1,5 +1,5 @@
-import { StyleSheet } from 'react-native';
-import { darkGreen, green } from './Constants';
+import {StyleSheet} from 'react-native';
+import {darkGreen, green} from './Constants';
 import Btn from './Btn';
 
 export const loginStyles = StyleSheet.create({
@@ -9,38 +9,52 @@ export const loginStyles = StyleSheet.create({
   },
   logintitle: {
     color: 'white',
-    fontSize: 64,
+    fontSize: 50,
     fontWeight: 'bold',
     marginVertical: 20,
+    paddingRight: 25,
+    fontFamily: "times"
   },
   formContainer: {
     backgroundColor: 'white',
-    height: 700,
+    height: 680,
     width: 460,
     borderTopLeftRadius: 130,
     borderBottomRightRadius: 300,
-    paddingTop: 100,
+    paddingTop: 80,
     alignItems: 'center',
+    paddingRight: 35,
   },
   welcomeText: {
     fontSize: 40,
     color: darkGreen,
     fontWeight: 'bold',
+    paddingTop: 20,
   },
   loginsubTitle: {
     color: 'grey',
     fontSize: 19,
     fontWeight: 'bold',
     marginBottom: 20,
+    paddingTop: 30,
   },
   forgotPassword: {
     color: darkGreen,
     fontWeight: 'bold',
     fontSize: 16,
+    paddingTop: 35,
   },
+  loginloginbtn: {
+    paddingTop: 30,
+  },
+  emailContainer: {
+    paddingTop: 30,
+  },
+  passContainer: {},
   accountContainer: {
     flexDirection: 'row',
     justifyContent: 'center',
+    paddingTop: 40,
   },
   signUpText: {
     fontSize: 16,
@@ -54,16 +68,19 @@ export const loginStyles = StyleSheet.create({
   homeContainer: {
     marginHorizontal: 40,
     marginVertical: 100,
-    
   },
   hometitle: {
     color: 'white',
-    fontSize: 64,
+    fontSize: 30,
+    fontStyle: 'italic',
+    fontFamily: 'times',
   },
   homesubTitle: {
     color: 'white',
-    fontSize: 64,
+    fontSize: 44,
     marginBottom: 40,
+    fontStyle: 'italic',
+    fontFamily: 'times',
   },
   signupcontainer: {
     alignItems: 'center',
@@ -71,29 +88,35 @@ export const loginStyles = StyleSheet.create({
   },
   signuptitle: {
     color: 'white',
-    fontSize: 64,
+    fontSize: 50,
     fontWeight: 'bold',
     marginTop: 20,
+    fontFamily: 'times',
+    fontStyle: 'normal',
+    paddingRight: 30
   },
   signupsubTitle: {
     color: 'white',
     fontSize: 19,
-    fontWeight: 'bold',
+    fontWeight: '300',
     marginBottom: 20,
+    fontFamily: 'times',
+    paddingRight: 30
   },
   signupformContainer: {
     backgroundColor: 'white',
-    height: 700,
+    height: 680,
     width: 460,
     borderTopLeftRadius: 150,
-    borderBottomRightRadius: 300,
+    borderBottomRightRadius: 280,
     paddingTop: 50,
     alignItems: 'center',
+    paddingRight: 40,
   },
   textInput: {
     width: '78%',
     marginBottom: 10,
-    borderBottomColor: 'grey',  
+    borderBottomColor: 'grey',
     borderBottomWidth: 1,
     fontSize: 16,
   },
@@ -129,7 +152,5 @@ export const loginStyles = StyleSheet.create({
     color: darkGreen,
     fontWeight: 'bold',
     fontSize: 16,
-  }
-
-
+  },
 });
