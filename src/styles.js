@@ -153,4 +153,5 @@ export const loginStyles = StyleSheet.create({
     fontWeight: 'bold',
     fontSize: 16,
   },
+  
 });
