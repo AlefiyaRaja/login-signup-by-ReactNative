@@ -147,21 +147,14 @@
 // export default Login;
 
 
+// 
+
 import React, { useState } from 'react';
-import {
-  View,
-  Text,
-  TouchableOpacity,
-  TextInput,
-  Alert,
-} from 'react-native';
+import { View, Text, TouchableOpacity, TextInput, Alert } from 'react-native';
 import Background from './Background';
 import Btn from './Btn';
 import { darkGreen } from './Constants';
-import Field from './Field'; 
 import { loginStyles } from './styles';
-import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
-
 
 const Login = props => {
   const [email, setEmail] = useState('');
@@ -169,17 +162,9 @@ const Login = props => {
   const [emailError, setEmailError] = useState('');
 
   const validateEmail = (email) => {
-   
-    const emailRegex =
-      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
-      <text>Invalid Email</text>
-      if (email.length === 0) {
-        return 'Please enter an email address.';
-      } else {
-        return <text>Please enter a valid email address (e.g., example@domain.com).</text>;
-      }
+      return 'Please enter a valid email address.';
     }
     return '';
   };
@@ -188,41 +173,42 @@ const Login = props => {
     const validationError = validateEmail(email);
     if (validationError) {
       setEmailError(validationError);
-      
+      Alert.alert('Error', validationError);
+      return;
     }
-
-    
-    Alert('Logged In');
+    // Proceed with login
+    Alert.alert('Logged In');
   };
 
   return (
     <Background>
-      <KeyboardAwareScrollView behavior="padding">
       <View style={loginStyles.container}>
         <Text style={loginStyles.logintitle}>Login</Text>
         <View style={loginStyles.formContainer}>
           <Text style={loginStyles.welcomeText}>Welcome Back</Text>
           <Text style={loginStyles.loginsubTitle}>Login to your account</Text>
 
-          <Field
+          <TextInput
             style={[
               loginStyles.emailContainer,
-              emailError && loginStyles.errorField, 
+              emailError && loginStyles.errorInput,
             ]}
             placeholder="Email / Username"
             keyboardType="email-address"
             value={email}
-            onChangeText={setEmail}
-            autoCapitalize="none"
-            autoCorrect={false}
-            error={!!emailError}
-            errorMessage={emailError}
+            onChangeText={text => {
+              setEmail(text);
+              setEmailError('');
+            }}
           />
-          <Field
+          {emailError ? (
+            <Text style={loginStyles.errorText}>{emailError}</Text>
+          ) : null}
+
+          <TextInput
             style={loginStyles.passContainer}
             placeholder="Password"
             secureTextEntry={true}
-            keyboardType="number"
             value={password}
             onChangeText={setPassword}
           />
@@ -235,7 +221,7 @@ const Login = props => {
               textColor="white"
               bgColor={darkGreen}
               btnLabel="Login"
-              Press={handleLogin}
+              onPress={handleLogin}
             />
           </View>
           <View style={loginStyles.accountContainer}>
@@ -247,7 +233,6 @@ const Login = props => {
           </View>
         </View>
       </View>
-      </KeyboardAwareScrollView>
     </Background>
   );
 };
