@@ -12,14 +12,14 @@ const Home = props => {
         <Text style={loginStyles.hometitle}>Let's start</Text>
         <Text style={loginStyles.homesubTitle}>Exploring</Text>
         <Btn
-          textColor="white"
-          bgColor={darkGreen}
+          textColor="#f7fafa"
+          bgColor={"#f7af6a"}
           btnLabel="Login"
           Press={() => props.navigation.navigate('Login')}
         />
         <Btn
-          textColor="darkGreen"
-          bgColor={white}
+          textColor="#f7af6a"
+          bgColor={"#f7fafa"}
           btnLabel="Signup"
           Press={() => props.navigation.navigate('Signup')}
         />

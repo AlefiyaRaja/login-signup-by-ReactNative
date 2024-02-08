@@ -8,7 +8,7 @@ export const loginStyles = StyleSheet.create({
     width: 460,
   },
   logintitle: {
-    color: 'white',
+    color: '#f7fafa',
     fontSize: 50,
     fontWeight: 'bold',
     marginVertical: 20,
@@ -16,10 +16,11 @@ export const loginStyles = StyleSheet.create({
     fontFamily: "times"
   },
   formContainer: {
-    backgroundColor: 'white',
+    backgroundColor: '#f7fafa',
     height: 680,
     width: 460,
     borderTopLeftRadius: 130,
+
     borderBottomRightRadius: 300,
     paddingTop: 80,
     alignItems: 'center',
@@ -27,7 +28,7 @@ export const loginStyles = StyleSheet.create({
   },
   welcomeText: {
     fontSize: 40,
-    color: darkGreen,
+    color: '#f7af6a',
     fontWeight: 'bold',
     paddingTop: 20,
   },
@@ -70,13 +71,13 @@ export const loginStyles = StyleSheet.create({
     marginVertical: 100,
   },
   hometitle: {
-    color: 'white',
+    color: '#f7fafa',
     fontSize: 30,
     fontStyle: 'italic',
     fontFamily: 'times',
   },
   homesubTitle: {
-    color: 'white',
+    color: '#f7fafa',
     fontSize: 44,
     marginBottom: 40,
     fontStyle: 'italic',
@@ -87,7 +88,7 @@ export const loginStyles = StyleSheet.create({
     width: 460,
   },
   signuptitle: {
-    color: 'white',
+    color: '#f7fafa',
     fontSize: 50,
     fontWeight: 'bold',
     marginTop: 20,
@@ -96,7 +97,7 @@ export const loginStyles = StyleSheet.create({
     paddingRight: 30
   },
   signupsubTitle: {
-    color: 'white',
+    color: '#f7fafa',
     fontSize: 19,
     fontWeight: '300',
     marginBottom: 20,
@@ -104,7 +105,7 @@ export const loginStyles = StyleSheet.create({
     paddingRight: 30
   },
   signupformContainer: {
-    backgroundColor: 'white',
+    backgroundColor: '#f7fafa',
     height: 680,
     width: 460,
     borderTopLeftRadius: 150,
