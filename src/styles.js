@@ -119,7 +119,8 @@ export const loginStyles = StyleSheet.create({
     marginBottom: 10,
     borderBottomColor: 'grey',
     borderBottomWidth: 1,
-    fontSize: 16,
+    fontSize: 28,
+  
   },
   agreementTextContainer: {
     flexDirection: 'row',
